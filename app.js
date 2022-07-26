@@ -16,13 +16,6 @@ mongoose
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());    
 app.get("/", (req, res) => {
-    // const user = new User({
-    //     handle: "haris",
-    //     email: "hahmed@abc.com",
-    //     password: "password"
-    // });
-    // user.save();
-
     res.send("Hello !")
 });
 
