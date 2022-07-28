@@ -7,6 +7,7 @@ import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 import axios from "axios";
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
   let store;
@@ -30,16 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore({});
   }
 
-  const root = document.getElementById('root');
-
-  ReactDOM.render(<Root store ={store} />, root);
-
-  // const root = ReactDOM.createRoot(document.getElementById('root'));
-  // root.render(
-  //   <React.StrictMode>
-  //     <App />
-  //   </React.StrictMode>
-  // );
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(
+    <React.StrictMode>
+      <Root store={ store }/>
+    </React.StrictMode>
+  );
   
 
   //Testing
