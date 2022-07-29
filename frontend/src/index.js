@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Testing
   window.axios = axios;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
 
 })
 

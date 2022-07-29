@@ -8,7 +8,6 @@ class MainPage extends React.Component {
     render() {
         return (
             <main>
-                <h1>A Twitter Clone</h1>
             </main>
         );
     }
