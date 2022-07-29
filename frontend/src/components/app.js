@@ -1,9 +1,20 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { Routes,Route } from 'react-router-dom';
+import MainPage from './main/main_page';
 
 const App = () => (
     <div className='page-container'>
-        <h1>HELLO WORLD FINALLY</h1>
+        
+        <Routes>
+            <Route path="/" element={<MainPage />} />
+
+        </Routes>
+
+        <footer>
+            Copyright &copy; 2022 Chirper
+        </footer>
+
     </div>
 );
 
