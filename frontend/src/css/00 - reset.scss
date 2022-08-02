@@ -40,3 +40,9 @@ button,
 input[type="submit"] {
     cursor: pointer;
 }
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+    border: 2px solid black;
+}
