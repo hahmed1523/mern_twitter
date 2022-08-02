@@ -5,6 +5,7 @@ import MainPage from './main/main_page';
 import NavbarContainer from './nav/navbar_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
+import TweetsContainer from './tweets/tweets_container';
 
 const App = () => (
     <div className='page-container'>
@@ -19,6 +20,9 @@ const App = () => (
                 <Route path="/signup" element={<SignupFormContainer />} />
             </Route>
             
+            <Route path="/tweets" element={<TweetsContainer />} />
+            {/* <Route path="/profile" element={ProfileContainer} />
+            <Route path="/new_tweet" element={TweetComposeContainer} /> */}
 
 
         </Routes>
