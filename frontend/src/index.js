@@ -8,6 +8,7 @@ import { logout } from './actions/session_actions';
 import axios from "axios";
 
 //Testing
+import { fetchTweets, fetchUserTweets, postTweet } from './actions/tweet_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -44,6 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.axios = axios;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchTweets = fetchTweets;
+  window.fetchUserTweets = fetchUserTweets;
+  window.postTweet = postTweet;
 })
 
 
