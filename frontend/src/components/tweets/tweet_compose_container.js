@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
-import { signup } from '../../actions/session_actions';
-import SignupFormWithNav from './signup_form';
+import { postTweet } from '../../actions/tweet_actions';
+import TweetComposeWithNav from './tweet_compose';
 
 
 const mapStateToProps = state => {
     return {
-        signedIn: state.session.isSignedIn,
+        currentUser: state.session.user,
         errors: state.errors.session
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        signup: user => dispatch(signup(user))
+        postTweet: data => dispatch(postTweet(data))
     };
 };
 
@@ -20,4 +20,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(SignupFormWithNav);
+)(TweetComposeWithNav);
