@@ -11,3 +11,5 @@ const TweetsErrorsReducer = (state = _nullErrors, action) => {
             return _nullErrors;
     }
 };
+
+export default TweetsErrorsReducer;
