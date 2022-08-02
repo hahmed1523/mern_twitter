@@ -1,4 +1,4 @@
-import { RECEIVE_TWEETS, RECEIVE_USER_TWEETS, RECEIVE_NEW_TWEET, RECEIVE_TWEET_ERRORS } from "../actions/tweet_actions";
+import { RECEIVE_TWEET_ERRORS } from "../actions/tweet_actions";
 
 const _nullErrors = [];
 
