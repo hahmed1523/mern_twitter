@@ -25,10 +25,10 @@ class NavBar extends React.Component {
             );
         } else {
             return (
-                <div className='nav-items'>
-                    <Link to={'/signup'}>Signup</Link>
-                    <Link to={'/login'}>Login</Link>
-                </div>
+                <ul className='nav-items'>
+                    <li><Link to={'/signup'}>Signup</Link></li>
+                    <li><Link to={'/login'}>Login</Link></li>
+                </ul>
             );
         };
     }

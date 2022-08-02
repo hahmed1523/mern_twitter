@@ -16,6 +16,12 @@ span, article, footer, time, small {
 
 }
 
+html {
+    font-size: 62.5%; // 16px * 0.625 = 10px
+}
+
+
+
 ul {
     list-style: none;
 }
@@ -44,5 +50,4 @@ input[type="submit"] {
 .page-container {
     position: relative;
     min-height: 100vh;
-    border: 2px solid black;
 }
