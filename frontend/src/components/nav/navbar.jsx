@@ -19,7 +19,7 @@ class NavBar extends React.Component {
                 <div className='nav-items'>
                     <Link to={'/tweets'}>All Tweets</Link>
                     <Link to={'/profile'}>Profile</Link>
-                    <Link to={'/new_tweet'}>All Tweets</Link>
+                    <Link to={'/new_tweet'}>New Tweet</Link>
                     <button onClick={this.logoutUser}>Logout</button>
                 </div>
             );
