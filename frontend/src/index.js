@@ -7,6 +7,7 @@ import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 import axios from "axios";
 
+//Testing
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -43,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.axios = axios;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-
 })
 
 
