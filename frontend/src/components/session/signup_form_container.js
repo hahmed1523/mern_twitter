@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { signup } from '../../actions/session_actions';
-import SignupForm from './signup_form';
+import SignupFormWithNav from './signup_form';
 import { useNavigate } from 'react-router-dom';
 
 const mapStateToProps = state => {
@@ -20,4 +20,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(SignupForm);
+)(SignupFormWithNav);

@@ -6,7 +6,6 @@ import { renderErrors } from '../../util/util';
 class SignupForm extends React.Component {
     constructor(props) {
         super(props);
-
         this.state= {
             email: '',
             handle: '',
@@ -15,6 +14,7 @@ class SignupForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     update(field) {
@@ -25,7 +25,6 @@ class SignupForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-
         let user = {
             email: this.state.email,
             handle: this.state.handle,
@@ -34,6 +33,11 @@ class SignupForm extends React.Component {
         };
 
         this.props.signup(user)
+            .then(res => {
+                if (!res.errors) {
+                    this.props.navigate('/login')
+                }
+            });
             
     }
 
@@ -71,7 +75,7 @@ class SignupForm extends React.Component {
                         />
                         <br/>
                         <input type="submit" value="Signup" />
-                        {renderErrors(this.props.errors)}
+                       {renderErrors(this.props.errors)}
                     </div>
                 </form>
             </section>
@@ -79,9 +83,14 @@ class SignupForm extends React.Component {
     }
 };
 
-// const SignupFormWithNav = props => {
-//     const navigate = useNavigate();
-//     return (<SignupForm navigate={navigate}></SignupForm>)
-// }
+const SignupFormWithNav = props => {
+    const navigate = useNavigate();
+    const { errors, signup } = props;
+    return (<SignupForm navigate={navigate}
+                        errors={props.errors}
+                        signup={props.signup}
+                        signedIn={props.signedIn}
+                        ></SignupForm>)
+}
 
-export default SignupForm;
+export default SignupFormWithNav;
