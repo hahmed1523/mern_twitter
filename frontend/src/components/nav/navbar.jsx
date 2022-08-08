@@ -36,7 +36,7 @@ class NavBar extends React.Component {
     render() {
         return (
             <nav>
-                <Link to="/"><h3 className='nav-title'>A Twitter Clone</h3></Link>
+                <Link to="/tweets"><h3 className='nav-title'>A Twitter Clone</h3></Link>
                 { this.getLinks() }
             </nav>
         );
