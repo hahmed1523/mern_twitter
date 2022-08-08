@@ -1,9 +1,13 @@
 .login-form-container {
-    border: 1px solid black;
     flex-grow: 1;
 }
 
 .login-form-box{
+
+    border: 1px solid black;
+    border-radius: 1rem;
+    background: rgb(246, 246, 246);
+
     h3 {
         text-align: center;
         font-size: 1.5rem;
@@ -12,7 +16,6 @@
 }
 
 .login-form {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,6 +33,14 @@
         text-align: center;
         background: rgb(12, 12, 12);
         color: white;
+        margin: 2rem 0;
     }
 
+}
+
+@media screen and (min-width: 40rem) {
+    .login-form-box {
+        width: 35rem;
+        margin: auto;
+    }
 }
